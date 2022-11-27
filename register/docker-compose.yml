@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    image: binance-p2p-register
+    build: .
+    container_name: binance-p2p-register
+    volumes:
+     - /home/jony/docker/binance-p2p-register/src:/app/src
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
+    restart: unless-stopped

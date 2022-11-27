@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+ app:
+  build: .
+  container_name: p2p-register-app-dev
+  image: p2p-register-app-dev
+  restart: unless-stopped
+  ports: 
+   - 3000:3000
+  volumes:
+   - /home/jony/docker/p2p-register-app-dev/src:/app/src
+  environment: 
+   - TZ=America/Argentina/Buenos_Aires
